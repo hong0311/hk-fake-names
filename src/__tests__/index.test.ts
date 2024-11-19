@@ -6,8 +6,8 @@ import {
   getLastNameRomanized,
   getLastNameBoth,
 } from '../index';
-
 import { Name } from '../types';
+import { FIRST_NAMES, LAST_NAMES } from '../data/names';
 
 describe('First Name Generation', () => {
   test('getFirstNameTraditional returns correct number of names', () => {
@@ -85,8 +85,6 @@ describe('Last Name Generation', () => {
 
 describe('Name Data Validation', () => {
   test('First Names have no duplicates', () => {
-    const { FIRST_NAMES } = require('../data/names');
-
     function findDuplicateNames(names: typeof FIRST_NAMES) {
       const duplicates: {
         name: (typeof FIRST_NAMES)[0];
@@ -118,7 +116,6 @@ describe('Name Data Validation', () => {
   });
 
   test('Last Names have no duplicates', () => {
-    const { LAST_NAMES } = require('../data/names');
     const nameUniqueKeys = LAST_NAMES.map((name: Name) => `${name.traditional}-${name.romanized}`);
     const uniqueNameKeys = new Set(nameUniqueKeys);
     expect(uniqueNameKeys.size).toBe(nameUniqueKeys.length);
