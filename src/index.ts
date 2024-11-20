@@ -64,6 +64,6 @@ export function getFullNameBoth(count: number = 1): { traditional: string; roman
   });
 }
 
-export const getFullName = getFullNameTraditional;
-export const getFirstName = getFirstNameTraditional;
-export const getLastName = getLastNameTraditional;
+export const getFullName = () => getFullNameTraditional(1)[0];
+export const getFirstName = () => getFirstNameTraditional(1)[0];
+export const getLastName = () => getLastNameTraditional(1)[0];

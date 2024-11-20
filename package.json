@@ -1,6 +1,6 @@
 {
   "name": "hk-fake-names",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Hong Kong styled fake names",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
